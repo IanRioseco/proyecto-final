@@ -1,0 +1,25 @@
+.deck {
+    display: flex; /* Cambia a flexbox */
+    flex-wrap: wrap; /* Permite que las cartas se ajusten a la siguiente línea si no hay espacio */
+    gap: 20px; /* Espacio entre las cartas */
+    margin-top: 20px;
+    justify-content: center; /* Centra las cartas en el contenedor */
+}
+
+.deck .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 150px; /* Ajusta el ancho según necesites */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #8b939c;
+}
+
+.deck .card:hover {
+    border-color: #007bff;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+}
