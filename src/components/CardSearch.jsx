@@ -59,8 +59,6 @@ function CardSearch({ onAdd }) {
                     {cards.slice(currentIndex, currentIndex + CARDS_PER_PAGE).map((card) => (
                         <div key={card.id} className="card-item">
                             <img src={card.images.small} alt={card.name} />
-                            <p>{card.name}</p>
-                            <p>Tipo: {card.types?.join(", ") || "N/A"}</p>
                             <button onClick={() => onAdd(card)}>Añadir al Mazo</button>
                         </div>
                     ))}

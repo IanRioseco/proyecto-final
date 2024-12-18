@@ -1,14 +1,63 @@
 header {
-    display: block;                /* Asegura que el header sea un elemento de bloque */
-    unicode-bidi: isolate;        /* Maneja el texto bidireccional correctamente */
-    background-color: #4CAF50;    /* Color de fondo verde */
-    color: white;                 /* Color del texto blanco */
-    padding: 20px;                /* Espaciado interno para el header */
-    text-align: center;           /* Centra el texto dentro del header */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    color: #333333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .poketitulo {
+    height: 150px; /* Mantiene la proporción */
+  }
+  
+  nav {
+    width: 100%;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #f3d113;
+  }
+
+/* Estilos para imagenes Header */
+.imagesHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  align-items: center;
 }
 
-header h1 {
-    margin: 0;                    /* Elimina el margen predeterminado del h1 */
-    font-size: 24px;              /* Tamaño de fuente para el título */
+.pikachu, .charmander, .bulbasur, .poke2, .poke3, .poke4 {
+  width: 100px;  /* Ajusta el tamaño de las imágenes */
+  height: auto; /* Mantiene la proporción */
 }
+
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  }
+  

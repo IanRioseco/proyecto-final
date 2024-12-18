@@ -52,25 +52,27 @@
 
 /* Grid para mostrar cartas */
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    gap: 15px;
-    width: 800px;
+    display: flex;
+    grid-template-columns: repeat(6, 1fr); /* 4 columnas */
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* Estilo de las cartas */
 .card-item {
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 10px;
     text-align: center;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    padding-bottom: 10px;
     
 }
 
 .card-item img {
-    width: 100px;
+    width: 200px;
     height: auto;
 }
 
