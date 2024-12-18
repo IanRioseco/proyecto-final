@@ -1,25 +1,68 @@
-.deck {
-    display: flex; /* Cambia a flexbox */
-    flex-wrap: wrap; /* Permite que las cartas se ajusten a la siguiente línea si no hay espacio */
-    gap: 20px; /* Espacio entre las cartas */
-    margin-top: 20px;
-    justify-content: center; /* Centra las cartas en el contenedor */
+.deck-builder-container {
+
+    margin: 10px auto;
+    padding: 20px;
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.deck .card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
+h1, h2 {
     text-align: center;
-    width: 150px; /* Ajusta el ancho según necesites */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #8b939c;
+    margin-bottom: 15px;
+
 }
 
-.deck .card:hover {
-    border-color: #007bff;
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.clear-deck-button {
+    display: block;
+    margin: 0 auto 20px; /* Centrar y dar margen inferior */
+    padding: 10px 20px;
+    background-color: #ff4c4c; /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+}
+
+.clear-deck-button:hover {
+    background-color: #ff1a1a;
+}
+
+.deck-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    gap: 15px; /* Espaciado entre las cartas */
+    padding: 10px; /* Espaciado interno */
+    margin: 0 auto; /* Centrar grid */
+    justify-content: center; /* Centrar las cartas horizontalmente */
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.card img {
+    max-width: 100%; /* Asegurar que las imágenes no se salgan del contenedor */
+    height: auto;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Animación al pasar el mouse */
 
 }
+
+.card p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+

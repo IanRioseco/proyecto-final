@@ -42,7 +42,7 @@ function Suggestions({ deck }) {
   return (
     <div>
       <h2>Sugerencias para Mejorar tu Mazo</h2>
-      {suggestedCards.length === 0 ? (
+      {deck.length === 0 ? (
         <p>No hay sugerencias disponibles. Completa tu mazo primero.</p>
       ) : (
         <div className="suggestions">

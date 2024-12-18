@@ -1,46 +1,100 @@
-.search-results {
-    display: flex; /* Cambia a flexbox */
-    flex-wrap: wrap; /* Permite que las cartas se ajusten a la siguiente línea si no hay espacio */
-    gap: 20px; /* Espacio entre las cartas */
-    margin-top: 20px;
-    justify-content: center; /* Centra las cartas en el contenedor */
+/* Contenedor principal del componente */
+.card-search {
+    text-align: center;
+    margin: 20px auto;
 }
 
-.search-card {
+/* Controles de búsqueda */
+.search-controls {
+    margin-bottom: 20px;
+}
+
+.search-controls input {
+    padding: 8px;
+    width: 200px;
+    margin-right: 10px;
+    border-radius: 4px;
     border: 1px solid #ccc;
+}
+
+.search-controls button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Contenedor del slider */
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Botones de navegación */
+.nav-button {
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Grid para mostrar cartas */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 15px;
+    width: 800px;
+}
+
+/* Estilo de las cartas */
+.card-item {
+    border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
     text-align: center;
-    width: 150px; /* Ajusta el ancho según necesites */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #8b939c;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
 }
 
-.search-card:hover {
+.card-item img {
+    width: 100px;
+    height: auto;
+}
+
+.card-item button {
+    margin-top: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-item button:hover {
+    background-color: #0056b3;
     border-color: #007bff;
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
-.search-card img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-
-button {
+.card-item:hover {
+    border-color: #007bff;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin-top: 5px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
 }
-
-button:hover {
-    background-color: #0056b3;
-}
-

@@ -1,0 +1,17 @@
+footer {
+    display: block;               /* Makes sure the footer is a block element */
+    unicode-bidi: isolate;       /* Ensures proper handling of bidirectional text */
+    background-color: #f8f9fa;   /* Light background color for the footer */
+    padding: 20px;               /* Adds some padding around the footer */
+    text-align: center;          /* Centers the text inside the footer */
+    position: relative;           /* Positions the footer relative to its container */
+    bottom: 0;                   /* Aligns it at the bottom if needed */
+    width: 100%;                 /* Ensures the footer takes the full width */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+footer p {
+    margin: 0;                   /* Removes default margin from paragraph */
+    color: #333;                 /* Dark gray color for text */
+    font-size: 14px;             /* Font size for footer text */
+}

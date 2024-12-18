@@ -3,6 +3,7 @@ import CardSearch from "./CardSearch";
 import Card from "./Card";
 import DeckAnalysis from "./DeckAnalysis";
 import Suggestions from "./Suggestions";
+import "./Deckbuilder.css"; // Importamos estilos para personalizar
 
 function DeckBuilder() {
   const [deck, setDeck] = useState([]);
@@ -39,12 +40,14 @@ function DeckBuilder() {
   };
 
   return (
-    <div>
+    <div className="deck-builder-container">
       <h1>Construye tu Mazo Pokémon</h1>
       <CardSearch onAdd={addCardToDeck} />
       <h2>Tu Mazo ({deck.length}/60):</h2>
-      <button onClick={clearDeck}>Limpiar Mazo</button>
-      <div className="deck">
+      <button className="clear-deck-button" onClick={clearDeck}>
+        Limpiar Mazo
+      </button>
+      <div className="deck-grid">
         {deck.map((card) => (
           <Card key={card.id} card={card} onRemove={removeCardFromDeck} />
         ))}

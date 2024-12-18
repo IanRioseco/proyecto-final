@@ -1,0 +1,14 @@
+header {
+    display: block;                /* Asegura que el header sea un elemento de bloque */
+    unicode-bidi: isolate;        /* Maneja el texto bidireccional correctamente */
+    background-color: #4CAF50;    /* Color de fondo verde */
+    color: white;                 /* Color del texto blanco */
+    padding: 20px;                /* Espaciado interno para el header */
+    text-align: center;           /* Centra el texto dentro del header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+}
+
+header h1 {
+    margin: 0;                    /* Elimina el margen predeterminado del h1 */
+    font-size: 24px;              /* Tamaño de fuente para el título */
+}
