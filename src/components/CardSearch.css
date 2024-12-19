@@ -53,14 +53,15 @@
 /* Grid para mostrar cartas */
 .cards-grid {
     display: flex;
-    grid-template-columns: repeat(6, 1fr); /* 4 columnas */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     justify-content: space-between;
 }
 
 /* Estilo de las cartas */
 .card-item {
+    
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
