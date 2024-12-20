@@ -40,15 +40,11 @@ header {
 /* Estilos para imagenes Header */
 .imagesHeader {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 95%;
   align-items: center;
 }
 
-.pikachu, .charmander, .bulbasur, .poke2, .poke3, .poke4 {
-  width: 100px;  /* Ajusta el tamaño de las imágenes */
-  height: auto; /* Mantiene la proporción */
-}
 
   @media (max-width: 768px) {
     nav ul {

@@ -1,0 +1,144 @@
+/* Estilos generales */
+.home-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #F7F7F7;
+}
+
+/* Carrusel - Primer bloque */
+.carrusel-section {
+  margin-bottom: 40px; /* Espacio debajo del carrusel */
+  background-color: #000; /* Fondo negro solo para la sección del carrusel */
+}
+
+.carrusel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carrusel-image img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFCB05;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 40px; /* Espacio entre el carrusel y el hero */
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #E60012;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.hero-text button {
+  background-color: #E60012;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-text button:hover {
+  background-color: #B0000F;
+}
+
+.hero-image img {
+  max-width: 300px;
+  height: auto;
+}
+
+/* Features Section */
+.features {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.feature {
+  text-align: center;
+  max-width: 250px;
+}
+
+.feature img {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+/* Popular Decks Section */
+.popular-decks {
+  margin-top: 40px;
+}
+
+.decks-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.deck img {
+  max-width: 150px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Testimonials Section */
+.testimonials {
+  margin-top: 40px;
+  text-align: center;
+  font-style: italic;
+  color: #555555;
+}
