@@ -1,5 +1,4 @@
 .deck-builder-container {
-
     margin: 10px auto;
     padding: 20px;
     max-width: 100%;
@@ -65,5 +64,21 @@ h1, h2 {
     margin: 10px 0 0;
     font-size: 14px;
     font-weight: bold;
+}
+
+.card-container {
+        
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    padding-bottom: 10px;
+}
+
+.card-image img{
+    width: 200px;
+    height: auto;
 }
 

@@ -13,7 +13,7 @@ function Card({ card, onRemove }) {
       className={`card-container ${isActive ? "active" : ""}`}
       onClick={toggleActive}
     >
-      <img src={card.images.small} alt={card.name} className="card-image" />
+      <img src={card.images.large} alt={card.name} className="card-image" />
       {!isActive && (
         <>
           <p>{card.name}</p>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./Suggestions.css";
 
-function Suggestions({ deck }) {
+function Suggestions({ deck, onAdd }) {
   const [suggestedCards, setSuggestedCards] = useState([]);
 
   const getSuggestions = async () => {
@@ -48,8 +49,9 @@ function Suggestions({ deck }) {
         <div className="suggestions">
           {suggestedCards.map((card) => (
             <div key={card.id} className="suggestion-card">
-              <img src={card.images.small} alt={card.name} />
+              <img src={card.images.large} alt={card.name} />
               <p>{card.name}</p>
+              <button onClick={() => onAdd(card)}>Añadir al Mazo</button>
             </div>
           ))}
         </div>

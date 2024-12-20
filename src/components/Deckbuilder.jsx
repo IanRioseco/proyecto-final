@@ -54,7 +54,7 @@ function DeckBuilder() {
         ))}
       </div>
       <DeckAnalysis deck={deck} />
-      <Suggestions deck={deck} />
+      <Suggestions deck={deck} onAdd={addCardToDeck} />
     </div>
   );
 }
