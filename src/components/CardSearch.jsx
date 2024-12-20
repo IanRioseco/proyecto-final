@@ -6,15 +6,23 @@ function CardSearch({ onAdd }) {
     const [search, setSearch] = useState(''); // Estado para la búsqueda
     const [cards, setCards] = useState([]); // Estado para las cartas obtenidas
     const [currentIndex, setCurrentIndex] = useState(0); // Índice del slider
+    const [mensaje, setMensaje] = useState(''); // Estado para el mensaje
 
     const CARDS_PER_PAGE = 12; // Mostrar 8 cartas por página (2 filas de 4)
 
     // Función para obtener las cartas de la API
     const fetchCards = async () => {
+        setMensaje('Buscando cartas...'); // Limpia el mensaje
         try {
             const response = await axios.get(`https://api.pokemontcg.io/v2/cards?q=name:${search}`);
             setCards(response.data.data); // Guarda las cartas obtenidas
             setCurrentIndex(0); // Reinicia el índice del slider
+            setMensaje(`Encontradas ${response.data.data.length} cartas.`); // Muestra cuántas cartas se encontraron
+            
+            // Limpia el mensaje después de 10 segundos
+            setTimeout(() => {
+                setMensaje('');
+            }, 10000);
         } catch (error) {
             console.error("Error al buscar cartas:", error);
         }
@@ -44,6 +52,7 @@ function CardSearch({ onAdd }) {
                 />
                 <button onClick={fetchCards}>Buscar</button>
             </div>
+            {mensaje && <p className="search-message">{mensaje}</p>} {/* Muestra el mensaje si existe */}
 
             {/* Slider de cartas */}
             <div className="slider-container">

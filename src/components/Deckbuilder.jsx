@@ -42,7 +42,8 @@ function DeckBuilder() {
   };
 
   return (
-    <div className="deck-builder-container">
+    <div className="deck-builder-container"
+    style={{ backgroundImage: 'url(/assets/backgraund.jpg)' }}>
       <h1>Construye tu Mazo Pokémon</h1>
       <CardSearch onAdd={addCardToDeck} />
       <div className="clear-deck-button-container">

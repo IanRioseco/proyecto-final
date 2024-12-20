@@ -17,7 +17,7 @@ function DeckAnalysis({ deck = [] }) { // Default deck to an empty array
   }, {});
 
   return (
-    <div className="deck-analysis">
+    <div className="deck-analysis" >
       <h2>Análisis de tu Mazo</h2>
       <p>Total de cartas: {totalCards}</p>
       <h3>Distribución de Tipos</h3>
