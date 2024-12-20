@@ -1,12 +1,34 @@
-/* Estilos generales */
-.home-container {
-    font-family: 'Arial', sans-serif;
-    background-color: #F7F7F7;
+/**
+ * home.css
+ *
+ * Este archivo contiene los estilos básicos para la página principal.
+ * Los estilos se aplican al contenedor principal, secciones específicas,
+ * y elementos de la página como el carrusel y las características del producto.
+ */
+
+/**
+ * Contenedor principal de la página
+ *
+ * El contenedor principal utiliza Flexbox para organizar el contenido de la página
+ * en una estructura de columna, asegurando que todos los elementos se alineen correctamente
+ * y tengan un espaciado adecuado. Se define una fuente base y un color de fondo.
+ */
+ .home-container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  background-color: #F7F7F7;
+  padding-top: 50px; /* Ajusta este valor según la altura del header */
 }
 
-/* Carrusel - Primer bloque */
+/**
+ * Carrusel - Primer bloque
+ *
+ * Estilos para la sección del carrusel. Se aplica un fondo negro a esta sección
+ * y se ajustan los contenedores y las imágenes para que el carrusel funcione correctamente
+ * y se vea de forma atractiva en la página.
+ */
 .carrusel-section {
-  margin-bottom: 40px; /* Espacio debajo del carrusel */
   background-color: #000; /* Fondo negro solo para la sección del carrusel */
 }
 
@@ -24,6 +46,13 @@
   transition: transform 0.5s ease;
 }
 
+/**
+ * Botones de navegación del carrusel
+ *
+ * Los botones para navegar entre las imágenes del carrusel están posicionados
+ * absolutamente, centrados verticalmente. Tienen un estilo visual de fondo
+ * oscuro y texto blanco para destacar sobre las imágenes.
+ */
 button {
   position: absolute;
   top: 50%;
@@ -49,46 +78,41 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Hero Section */
+/**
+ * Hero Section
+ *
+ * La sección Hero presenta un diseño en columna con texto centrado tanto
+ * horizontal como verticalmente. El fondo es de color negro, con el texto
+ * en un contraste destacado utilizando un color dorado para el título.
+ */
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #FFCB05;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  background-color: #000000;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-top: 40px; /* Espacio entre el carrusel y el hero */
+  flex-direction: column;
+  text-align: center; /* Asegura que el texto esté centrado dentro de sus elementos */
 }
 
 .hero-text {
-  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos dentro de hero-text */
+  justify-content: center; /* Centra verticalmente los elementos dentro de hero-text */
+  min-width: 100%;
 }
 
 .hero-text h1 {
   font-size: 2.5rem;
-  color: #E60012;
-  margin-bottom: 10px;
+  color: #FFD700;
+  padding: 10px;
 }
 
 .hero-text p {
   font-size: 1.2rem;
-  color: #333333;
-}
-
-.hero-text button {
-  background-color: #E60012;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.hero-text button:hover {
-  background-color: #B0000F;
+  color: #ffffff;
+  margin-top: 0; /* Ajuste para evitar un margen superior en el párrafo */
 }
 
 .hero-image img {
@@ -96,12 +120,24 @@ button:hover {
   height: auto;
 }
 
-/* Features Section */
+/**
+ * Features Section
+ *
+ * Esta sección destaca las principales características del producto.
+ * Se organiza en una cuadrícula de tres columnas, donde cada característica
+ * incluye un ícono y una breve descripción.
+ */
 .features {
   margin-top: 40px;
   text-align: center;
 }
 
+/**
+ * Grid de características
+ *
+ * Las características del producto están distribuidas de forma equitativa en
+ * el espacio disponible, utilizando Flexbox para una disposición adaptable.
+ */
 .features-grid {
   display: flex;
   justify-content: space-around;
@@ -118,27 +154,165 @@ button:hover {
   margin-bottom: 10px;
 }
 
-/* Popular Decks Section */
-.popular-decks {
-  margin-top: 40px;
+/**
+ * Estilos para la sección de partes de una carta de JCC Pokémon
+ */
+
+/* Contenedor principal de la sección */
+.card-parts {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1000px; /* Ajustado para acomodar la carta */
+  border-radius: 12px;
+  background-color: #fafafa; /* Fondo gris claro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.decks-grid {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.deck img {
-  max-width: 150px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-/* Testimonials Section */
-.testimonials {
-  margin-top: 40px;
+/* Título principal de la sección */
+.card-parts-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
   text-align: center;
-  font-style: italic;
-  color: #555555;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor general para la información y la carta */
+.card-parts-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Espaciado entre las secciones */
+}
+
+/* Sección izquierda: Información de las partes */
+.info-sections {
+  flex: 1; /* Ocupa el máximo espacio disponible */
+  margin-right: 20px;
+}
+
+/* Bloques individuales para cada parte */
+.card-part {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efecto hover para cada bloque */
+.card-part:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Encabezado de los bloques (título y botón) */
+.card-part-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Títulos dentro de cada parte */
+.card-part-title {
+  flex: 1;
+}
+
+.card-part-title h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+/* Títulos activos (cuando están desplegados) */
+.card-part-title h3.active {
+  color: #d32f2f; /* Rojo oscuro */
+}
+
+/* Botones desplegables */
+.card-part-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toggle-button {
+  background-color: #f44336; /* Rojo brillante */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Botón activo */
+.toggle-button.active {
+  background-color: #c62828; /* Rojo oscuro */
+}
+
+/* Hover del botón */
+.toggle-button:hover {
+  transform: scale(1.1); /* Crece ligeramente al pasar el cursor */
+}
+
+/* Contenido desplegable (párrafos) */
+.card-part p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid #f44336; /* Línea decorativa en el borde izquierdo */
+  background-color: #fefefe;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* Sección derecha: Carta aleatoria */
+.random-card-container {
+  flex: 0 0 auto; /* No se redimensiona */
+  text-align: center;
+  max-width: 300px;
+}
+
+/* Estilos para la carta */
+.card {
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover de la carta */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de la carta */
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Nombre de la carta */
+.card p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 0;
 }

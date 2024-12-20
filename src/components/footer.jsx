@@ -7,7 +7,10 @@ function Footer() {
     <footer>
       <div className="footer-content">
         <div className="footer-left">
-          <h3>Pokémazo - Pokémon Deck Builder</h3>
+          <h3>
+            <img src="/assets/logo.png" alt="Pokémazo Logo" className="footer-logo" />
+            Pokémazo - Pokémon Deck Builder
+          </h3>
           <p>&copy; 2024 Pokémon Deck Builder. Todos los derechos reservados.</p>
         </div>
         <div className="footer-middle">

@@ -8,10 +8,8 @@ function Header() {
     <header>
       <div className='imagesHeader'>
 
-
         <img className='poketitulo' src='/assets/poketitulo.png' alt='poketitulo'/>
 
-        
       </div>
       <nav>
         <ul>

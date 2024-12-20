@@ -46,7 +46,10 @@ const Carrusel = ({ interval = 2600 }) => {
       <button className="next-btn" onClick={nextImage}>
         &gt;
       </button>
-    </div>
+      <div className="button-container">
+        <button className="gallery-btn">Ver la Galería de Cartas</button>
+      </div>
+    </div>  
   );
 };
 
