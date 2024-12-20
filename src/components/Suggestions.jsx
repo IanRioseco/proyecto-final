@@ -28,7 +28,7 @@ function Suggestions({ deck, onAdd }) {
       const response = await axios.get(
         `https://api.pokemontcg.io/v2/cards?q=supertype:${weakestType}`
       );
-      setSuggestedCards(response.data.data.slice(0, 5)); // Suggest the first 5 cards
+      setSuggestedCards(response.data.data.slice(0, 4)); // Suggest the first 5 cards
     } catch (error) {
       console.error("Error obtaining suggestions:", error);
     }

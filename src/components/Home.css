@@ -240,7 +240,7 @@ button:hover {
   justify-content: flex-end;
 }
 
-.toggle-button {
+.card-part-button button {
   background-color: #f44336; /* Rojo brillante */
   color: #fff;
   border: none;
@@ -254,10 +254,13 @@ button:hover {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+
 /* Botón activo */
 .toggle-button.active {
   background-color: #c62828; /* Rojo oscuro */
 }
+
+
 
 /* Hover del botón */
 .toggle-button:hover {
