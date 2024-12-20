@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CardSearch from "./CardSearch";
 import Card from "./Card";
+import "./Card.css";
 import DeckAnalysis from "./DeckAnalysis";
 import Suggestions from "./Suggestions";
 import "./Deckbuilder.css"; // Importamos estilos para personalizar

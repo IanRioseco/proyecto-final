@@ -1,0 +1,30 @@
+.card-container {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card-container:hover {
+    transform: scale(1.05); /* Escala suave al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-container.active {
+    transform: translate(-50%,-50%) scale(1.5); /* Escala grande para simular el acercamiento */
+    z-index: 100; /* Superpone la carta sobre las demás */
+    position: absolute; /* Saca la carta del flujo normal */
+    top: 50%; /* Centra la carta verticalmente */
+    left: 50%; /* Centra la carta horizontalmente */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    background-color: white; /* Fondo blanco para que resalte */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 10px; /* Espaciado interno */
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  

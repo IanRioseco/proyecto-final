@@ -32,13 +32,14 @@ h1, h2 {
 }
 
 .deck-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
-    gap: 15px; /* Espaciado entre las cartas */
-    padding: 10px; /* Espaciado interno */
-    margin: 0 auto; /* Centrar grid */
-    justify-content: center; /* Centrar las cartas horizontalmente */
-}
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaciado entre cartas */
+    justify-content: center;
+    margin: 20px;
+    position: relative; /* Manejo de z-index de cartas */
+  }
+  
 
 .card {
     border: 1px solid #ddd;
