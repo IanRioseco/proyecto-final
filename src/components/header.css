@@ -12,7 +12,7 @@ header {
 }
 
 .poketitulo {
-  height: 150px; /* Mantiene la proporción */
+  height: 100px; /* Reduce la altura del header */
 }
 
 nav {
@@ -24,17 +24,17 @@ nav ul {
   display: flex;
   justify-content: center;
   margin: 0; /* Elimina márgenes extra */
-  padding: 15px; /* Elimina rellenos extra */
+  padding: 10px; /* Reduce el padding */
 }
 
 nav ul li {
-  margin-right: 20px;
+  margin-right: 15px; /* Reduce el espacio entre los elementos */
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem; /* Reduce el tamaño de la fuente */
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -59,11 +59,11 @@ nav ul li a:hover {
   }
 
   nav ul li {
-    margin: 10px 0;
+    margin: 8px 0; /* Reduce el espacio en pantallas pequeñas */
   }
 }
 
 /* Ajuste para el contenido principal */
 .body-content {
-  padding-top: 150px; /* Ajusta según la altura total del header */
+  padding-top: 120px; /* Ajusta según la nueva altura del header */
 }

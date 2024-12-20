@@ -36,12 +36,13 @@ function Suggestions({ deck, onAdd }) {
 
   useEffect(() => {
     if (deck.length > 0) {
-      getSuggestions();
+        getSuggestions();
     }
-  }, [deck, getSuggestions]); // Include getSuggestions in the dependency array
+}, [deck, getSuggestions]);
+ // Include getSuggestions in the dependency array
 
   return (
-    <div>
+    <div className="suggestions-container">
       <h2>Sugerencias para Mejorar tu Mazo</h2>
       {deck.length === 0 ? (
         <p>No hay sugerencias disponibles. Completa tu mazo primero.</p>
@@ -51,7 +52,9 @@ function Suggestions({ deck, onAdd }) {
             <div key={card.id} className="suggestion-card">
               <img src={card.images.large} alt={card.name} loading="lazy" />
               <p>{card.name}</p>
-              <button onClick={() => onAdd(card)}>Añadir al Mazo</button>
+              <button className="suggestions-button" onClick={() => onAdd(card)}>
+                Añadir al Mazo
+              </button>
             </div>
           ))}
         </div>

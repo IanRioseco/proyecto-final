@@ -45,10 +45,12 @@ function DeckBuilder() {
     <div className="deck-builder-container">
       <h1>Construye tu Mazo Pokémon</h1>
       <CardSearch onAdd={addCardToDeck} />
-      <h2>Tu Mazo ({deck.length}/60):</h2>
-      <button className="clear-deck-button" onClick={clearDeck}>
-        Limpiar Mazo
-      </button>
+      <div className="clear-deck-button-container">
+        <h2>Tu Mazo ({deck.length}/60)</h2>
+        <button className="clear-deck-button" onClick={clearDeck}>
+          Limpiar Mazo
+        </button>
+      </div>
       <div className="deck-grid">
         {deck.map((card) => (
           <Card key={card.id} card={card} onRemove={removeCardFromDeck} />

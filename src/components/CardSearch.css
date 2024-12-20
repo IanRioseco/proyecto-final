@@ -24,12 +24,12 @@
     color: white;
     border-radius: 4px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .search-controls button:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
 }
 
 /* Contenedor del slider */
@@ -49,8 +49,12 @@
     margin: 0 10px;
     padding: 5px 10px;
     border-radius: 50%;
+    transition: background-color 0.3s ease;
 }
 
+.nav-button:hover {
+    background-color: #ddd;
+}
 
 .nav-button:disabled {
     opacity: 0.5;
@@ -59,52 +63,69 @@
 
 /* Grid para mostrar cartas */
 .cards-grid {
-    display: flex;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajuste automático de columnas */
+    gap: 20px; /* Espacio entre las cartas */
     width: 100%;
-    flex-wrap:wrap;
-    justify-content: space-between;
+    justify-items: center;
 }
 
 /* Estilo de las cartas */
 .card-item {
-    
+    position: relative; /* Para permitir que el botón se posicione dentro */
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    padding-bottom: 10px;
-    
+    overflow: hidden; /* Evitar que elementos se salgan del contenedor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 180px; /* Asegura que todas las cartas tengan el mismo ancho */
 }
 
+.card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen de la carta */
 .card-item img {
-    width: 200px;
+    width: 100%; /* Ajuste al contenedor */
     height: auto;
+    display: block; /* Evita que la imagen cause margen */
 }
 
+/* Botón de añadir al mazo */
 .card-item button {
-    margin-top: 8px;
+    position: absolute;
+    bottom: 10px; /* Posicionado al final de la carta */
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease;
+}
+
+.card-item:hover button {
+    opacity: 1; /* Mostrar al pasar el mouse */
 }
 
 .card-item button:hover {
     background-color: #0056b3;
-    border-color: #007bff;
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.card-item:hover {
-    border-color: #007bff;
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+.card-search button {
+    position: relative;
+    display: inline-block; /* Evita botones flotantes en posiciones incorrectas */
+}
+
+.cards-grid button {
+    position: absolute; /* Asegura que solo los botones en las cartas sigan este estilo */
 }

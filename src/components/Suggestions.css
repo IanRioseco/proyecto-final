@@ -1,45 +1,54 @@
 .suggestions {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .suggestion-card {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    text-align: center;
-    background-color: #f9f9f9;
-    transition: transform 0.3s;
-  }
-  
-  .suggestion-card img {
-    max-width: 100%;
-    border-radius: 5px;
-  }
-  
-  .suggestion-card button {
-    margin-top: 8px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .suggestion-card button:hover {
-    background-color: #0056b3;
-    border-color: #007bff;
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-  }
-  
-  .suggestion-card:hover {
-    transform: scale(1.05); /* Animación al pasar el mouse */
-    border-color: #007bff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.suggestion-card {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  transition: transform 0.3s;
+}
+
+/* Asegura que las imágenes de las cartas tengan el tamaño correcto */
+.suggestion-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* Botones dentro de las cartas sugeridas */
+.suggestion-card button {
+  position: absolute;
+  margin-top: 8px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Efecto hover en los botones */
+.suggestion-card button:hover {
+  background-color: #0056b3;
+  border-color: #007bff;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto hover en las cartas */
+.suggestion-card:hover {
+  transform: scale(1.05); /* Agranda la carta ligeramente */
+  border-color: #007bff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Oculta cualquier contenido no deseado en el contenedor principal */
+.suggestions-container {
+  overflow: hidden; /* Asegura que solo se muestre el contenido deseado */
+}

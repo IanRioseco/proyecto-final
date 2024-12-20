@@ -53,7 +53,7 @@
  * absolutamente, centrados verticalmente. Tienen un estilo visual de fondo
  * oscuro y texto blanco para destacar sobre las imágenes.
  */
-button {
+.home-container button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

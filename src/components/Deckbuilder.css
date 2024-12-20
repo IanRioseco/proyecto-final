@@ -15,16 +15,16 @@ h1, h2 {
 }
 
 .clear-deck-button {
-    display: block;
-    margin: 0 auto 20px; /* Centrar y dar margen inferior */
     padding: 10px 20px;
-    background-color: #ff4c4c; /* Rojo */
+    background-color: #ff4c4c;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
 }
+
+
 
 .clear-deck-button:hover {
     background-color: #ff1a1a;
@@ -37,7 +37,7 @@ h1, h2 {
     justify-content: center;
     margin: 20px;
     position: relative; /* Manejo de z-index de cartas */
-  }
+}
   
 
 .card {
@@ -82,3 +82,10 @@ h1, h2 {
     height: auto;
 }
 
+.clear-deck-button-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    gap: 30px;
+}
