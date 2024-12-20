@@ -5,6 +5,7 @@ import "./Card.css";
 import DeckAnalysis from "./DeckAnalysis";
 import Suggestions from "./Suggestions";
 import "./Deckbuilder.css"; // Importamos estilos para personalizar
+import "./DeckAnalysis.css";
 
 function DeckBuilder() {
   const [deck, setDeck] = useState([]);

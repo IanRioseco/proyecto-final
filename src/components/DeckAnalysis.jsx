@@ -1,49 +1,39 @@
 import React from "react";
+import "./DeckAnalysis.css"; // Ensure you have styles for this component
 
-function DeckAnalysis({ deck }) {
-  const analyzeDeck = () => {
-    const typeCounts = { Pokémon: 0, Trainer: 0, Energy: 0 };
-    const attributeCounts = {};
+function DeckAnalysis({ deck = [] }) { // Default deck to an empty array
+  // Contar el total de cartas
+  const totalCards = deck.length;
 
-    deck.forEach((card) => {
-      // Contar por supertype
-      if (card.supertype) {
-        typeCounts[card.supertype] = (typeCounts[card.supertype] || 0) + 1;
-      }
-
-      // Contar por tipos (atributos como Fuego, Agua)
-      if (card.types) {
-        card.types.forEach((type) => {
-          attributeCounts[type] = (attributeCounts[type] || 0) + 1;
-        });
-      }
-    });
-
-    return { typeCounts, attributeCounts };
-  };
-
-  const { typeCounts, attributeCounts } = analyzeDeck();
+  // Contar la distribución de tipos
+  const typeCount = deck.reduce((acc, card) => {
+    // Ensure the card has a types property that is an array
+    if (card.types && Array.isArray(card.types)) {
+      card.types.forEach((type) => {
+        acc[type] = (acc[type] || 0) + 1; // Incrementa el contador del tipo
+      });
+    }
+    return acc;
+  }, {});
 
   return (
-    <div>
-      <h2>Análisis del Mazo</h2>
-      <div>
-        <h3>Distribución por Supertype:</h3>
-        <ul>
-          <li>Pokémon: {typeCounts["Pokémon"]}</li>
-          <li>Trainer: {typeCounts["Trainer"]}</li>
-          <li>Energy: {typeCounts["Energy"]}</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Distribución por Tipo Elemental:</h3>
-        <ul>
-          {Object.entries(attributeCounts).map(([type, count]) => (
-            <li key={type}>
-              {type}: {count}
-            </li>
-          ))}
-        </ul>
+    <div className="deck-analysis">
+      <h2>Análisis de tu Mazo</h2>
+      <p>Total de cartas: {totalCards}</p>
+      <h3>Distribución de Tipos</h3>
+      <ul>
+        {Object.entries(typeCount).map(([type, count]) => (
+          <li key={type}>
+            {type}: {count} cartas
+          </li>
+        ))}
+      </ul>
+      <div className="type-chart">
+        {Object.entries(typeCount).map(([type, count]) => (
+          <div key={type} className="type-bar" style={{ height: `${count * 10}px` }}>
+            {type}
+          </div>
+        ))}
       </div>
     </div>
   );
