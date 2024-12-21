@@ -43,8 +43,8 @@ function DeckBuilder() { // Propiedades del componente
   };
 
   return ( 
-    <div className="deck-builder-container" // Contenedor principal del componente
-    style={{ backgroundImage: 'url(/assets/backgraund.jpg)' }}> {/* Ruta pública de la imagen */}
+    <div className="deck-builder-container"
+    style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/backgraund.jpg)`, }}> {/* Ruta pública de la imagen */}
       <h1>Construye tu Mazo Pokémon</h1> {/*Título del componente*/}
       <CardSearch onAdd={addCardToDeck} /> {/*Componente CardSearch*/}
       <div className="clear-deck-button-container"> {/* Contenedor para el botón de limpieza */}

@@ -8,7 +8,9 @@ function Footer() {
       <div className="footer-content"> {/* Contenedor principal del componente */}
         <div className="footer-left"> {/* Contenedor para la sección izquierda */}
           <h3>
-            <img src="/assets/logo.png" alt="Pokémazo Logo" className="footer-logo" /> {/*Logo de Pokémazo*/}
+            <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} 
+            alt="Pokémazo Logo" 
+            className="footer-logo" /> {/*Logo de Pokémazo*/}
             Pokémazo - Pokémon Deck Builder {/*Título de Pokémazo*/}
           </h3>
           <p>&copy; 2024 Pokémon Deck Builder. Todos los derechos reservados.</p> {/*Copyright de Pokémazo*/}

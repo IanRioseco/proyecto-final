@@ -35,15 +35,10 @@ nav ul li a {
   color: #fff; /* Color de texto */
   text-decoration: none; /* Sin subrayado */
   font-size: 1rem; /* Reduce el tamaño de la fuente */
-<<<<<<< HEAD
-  font-weight: bold; /* Estilo de fuente */
-  transition: color 0.3s ease; /* Animación de transición */
-=======
   font-weight: bold;
   transition: color 0.3s ease;
   font-size: 22px;
 
->>>>>>> 38b597aeaedb500b60ec8ef9282ab2b9fc3f6562
 }
 
 nav ul li a:hover {

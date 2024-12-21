@@ -5,10 +5,10 @@ import './Carrusel.css';
 const Carrusel = ({ interval = 2600 }) => {
   // Rutas de las imágenes dentro de la carpeta 'assets'
   const images = [
-    "/assets/carrusel1.jpg",
-    "/assets/carrusel2.jpg",
-    "/assets/carrusel3.jpg",
-    "/assets/carrusel4.jpg",
+    `${process.env.PUBLIC_URL}/assets/carrusel1.jpg`,
+    `${process.env.PUBLIC_URL}/assets/carrusel2.jpg`,
+    `${process.env.PUBLIC_URL}/assets/carrusel3.jpg`,
+    `${process.env.PUBLIC_URL}/assets/carrusel4.jpg`,
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
