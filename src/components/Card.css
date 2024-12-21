@@ -1,48 +1,48 @@
 .card-container {
-
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  position: relative; /* Posiciona el contenedor */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación de transición */
+  cursor: pointer; /* Permite hacer clic en el contenedor */
 }
   
 .card-container:hover {
   transform: scale(1.05); /* Escala suave al pasar el mouse */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
 }
   
 .card-container.active {
-  transform: translate(-50%,-50%) scale(1.5); /* Escala grande para simular el acercamiento */
+  display: block; /* Muestra la carta */
+  height: 110px; /* Ajusta el tamaño según el contenido */
+  width: 110px; /* Ajusta el tamaño según el contenido */
+  transform: scale(2.31192); /* Escala grande para simular el acercamiento */
   z-index: 100; /* Superpone la carta sobre las demás */
-  position: absolute; /* Saca la carta del flujo normal */
-  top: 50%; /* Centra la carta verticalmente */
+  position: fixed; /* Posiciona la carta */
   left: 50%; /* Centra la carta horizontalmente */
+  right: 50%; /* Centra la carta horizontalmente */
+  top:  50%; /* Centra la carta verticalmente */
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-  background-color: white; /* Fondo blanco para que resalte */
-  border-radius: 8px; /* Esquinas redondeadas */
-  padding: 10px; /* Espaciado interno */
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, display 0.4s ease-in-out;
 }
   
-  .card-image {
-    width: 100%;
-    height: auto;
-    display: block;
+.card-image {
+    width: 100%; /* Ajuste al contenedor */
+    height: auto; /* Ajuste al contenedor */
+    display: block; /* Evita que la imagen cause margen */
 }
 .card-container button {
-  background-color: #007bff;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #007bff; /* Color de fondo */
+  border-radius: 5px; /* Radio de bordes */
+  cursor: pointer; /* Permite hacer clic en el botón */
+  color: #fff; /* Color de texto */
+  border: none; /* Sin borde */
+  padding: 5px 10px; /* Tamaño del botón */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animación de transición */
 
 }
 
 .card-container button:hover {
-  background-color: #0056b3;
-  border-color: #007bff;
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: #0056b3; /* Color de fondo */
+  border-color: #007bff; /* Color de borde */
+  transform: translateY(-5px); /* Animación de transición */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 
 }

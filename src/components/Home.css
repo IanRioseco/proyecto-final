@@ -14,10 +14,10 @@
  * y tengan un espaciado adecuado. Se define una fuente base y un color de fondo.
  */
  .home-container {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Arial', sans-serif;
-  background-color: #F7F7F7;
+  display: flex; /* Alineación de elementos */
+  flex-direction: column; /* Alineación vertical */
+  font-family: 'Arial', sans-serif; /* Fuente base */
+  background-color: #F7F7F7; /* Color de fondo */
   padding-top: 50px; /* Ajusta este valor según la altura del header */
 }
 
@@ -33,17 +33,17 @@
 }
 
 .carrusel-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-}
+  position: relative; /* Posiciona el contenedor */
+  width: 100%; /* Ajusta el ancho según el contenido */
+  max-width: 1200px; /* Ajusta el ancho según el contenido */
+  margin: 0 auto; /* Centra el contenedor en la página */
+  overflow: hidden; /* Evita que el contenido se salga del contenedor */
+} 
 
 .carrusel-image img {
-  width: 100%;
-  border-radius: 10px;
-  transition: transform 0.5s ease;
+  width: 100%; /* Ajusta el ancho según el contenido */
+  border-radius: 10px; /* Radio de bordes */
+  transition: transform 0.5s ease; /* Animación de transición */
 }
 
 /**
@@ -54,28 +54,28 @@
  * oscuro y texto blanco para destacar sobre las imágenes.
  */
 .home-container button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
+  position: absolute; /* Posiciona el botón */
+  top: 50%; /* Centra el botón verticalmente */
+  transform: translateY(-50%); /* Centra el botón horizontalmente */
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo */
+  color: white; /* Color de texto */
+  border: none; /* Sin borde */
+  font-size: 2rem; /* Tamaño de fuente */
+  padding: 10px; /* Tamaño del contenedor */
+  cursor: pointer; /* Permite hacer clic en el botón */
+  z-index: 10; /* Posición en la parte superior */
 }
 
 .prev-btn {
-  left: 10px;
-}
+  left: 10px; /* Ajusta el botón a la izquierda */
+} 
 
 .next-btn {
-  right: 10px;
+  right: 10px; /* Ajusta el botón a la derecha */
 }
 
 button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7); /* Color de fondo al pasar el mouse */
 }
 
 /**
@@ -86,38 +86,38 @@ button:hover {
  * en un contraste destacado utilizando un color dorado para el título.
  */
 .hero {
-  display: flex;
-  align-items: center;
+  display: flex; /* Alineación de elementos */
+  align-items: center; /* Alineación vertical */
   justify-content: center; /* Centra el contenido horizontalmente */
-  background-color: #000000;
-  padding: 20px;
-  flex-direction: column;
+  background-color: #000000; /* Color de fondo */
+  padding: 20px; /* Tamaño del contenedor */
+  flex-direction: column; /* Alineación vertical */
   text-align: center; /* Asegura que el texto esté centrado dentro de sus elementos */
 }
 
 .hero-text {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Alineación de elementos */
+  flex-direction: column; /* Alineación vertical */
   align-items: center; /* Centra los elementos dentro de hero-text */
   justify-content: center; /* Centra verticalmente los elementos dentro de hero-text */
-  min-width: 100%;
+  min-width: 100%; /* Ajusta el ancho según el contenido */
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
-  color: #FFD700;
-  padding: 10px;
+  font-size: 2.5rem; /* Tamaño de fuente */
+  color: #FFD700; /* Color de texto */
+  padding: 10px; /* Tamaño del contenedor */
 }
 
 .hero-text p {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #ffffff; /* Color de texto */
   margin-top: 0; /* Ajuste para evitar un margen superior en el párrafo */
 }
 
 .hero-image img {
   max-width: 300px;
-  height: auto;
+  height: auto; /* Ajusta el alto según el contenido */
 }
 
 /**
@@ -129,7 +129,7 @@ button:hover {
  */
 .features {
   margin-top: 40px;
-  text-align: center;
+  text-align: center; /* Alineación de texto */
 }
 
 /**
@@ -139,19 +139,19 @@ button:hover {
  * el espacio disponible, utilizando Flexbox para una disposición adaptable.
  */
 .features-grid {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  display: flex; /* Alineación de elementos */
+  justify-content: space-around; /* Alineación horizontal */
+  margin-top: 20px; /* Margen para separar el contenido */
 }
 
 .feature {
-  text-align: center;
-  max-width: 250px;
-}
+  text-align: center; /* Alineación de texto */
+  max-width: 250px; /* Ajusta el ancho según el contenido */
+} 
 
 .feature img {
-  max-width: 100px;
-  margin-bottom: 10px;
+  max-width: 100px; /* Ajusta el ancho según el contenido */  
+  margin-bottom: 10px; /* Margen para separar el contenido */
 }
 
 /**
@@ -160,73 +160,73 @@ button:hover {
 
 /* Contenedor principal de la sección */
 .card-parts {
-  margin: 2rem auto;
-  padding: 2rem;
+  margin: 2rem auto; /* Margen para centrar el contenedor */
+  padding: 2rem; /* Tamaño del contenedor */
   max-width: 1000px; /* Ajustado para acomodar la carta */
-  border-radius: 12px;
+  border-radius: 12px; /* Radio de bordes */
   background-color: #fafafa; /* Fondo gris claro */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 /* Título principal de la sección */
 .card-parts-title h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  color: #000;
-  margin-bottom: 2rem;
+  font-size: 2rem; /* Tamaño de fuente */
+  font-weight: bold; /* Estilo de fuente */
+  text-align: center; /* Alineación de texto */
+  text-transform: uppercase; /* Transformación de texto */
+  color: #000; /* Color de texto */
+  margin-bottom: 2rem; /* Margen para separar el contenido */
 }
 
 /* Contenedor general para la información y la carta */
 .card-parts-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: flex; /* Alineación de elementos */
+  justify-content: space-between; /* Alineación horizontal */
+  align-items: flex-start; /* Alineación vertical */
   gap: 20px; /* Espaciado entre las secciones */
 }
 
 /* Sección izquierda: Información de las partes */
 .info-sections {
   flex: 1; /* Ocupa el máximo espacio disponible */
-  margin-right: 20px;
+  margin-right: 20px; /* Margen para separar el contenido */
 }
 
 /* Bloques individuales para cada parte */
 .card-part {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 12px;
+  margin: 1.5rem 0; /* Margen para separar el contenido */
+  padding: 1rem; /* Tamaño del contenedor */
+  border: 2px solid #e0e0e0; /* Borde */
+  border-radius: 12px; /* Radio de bordes */
   background-color: #fff; /* Fondo blanco */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s; /* Animación de transición */
 }
 
 /* Efecto hover para cada bloque */
 .card-part:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Animación de transición */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 
 /* Encabezado de los bloques (título y botón) */
 .card-part-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
+  display: flex; /* Alineación de elementos */
+  justify-content: space-between; /* Alineación horizontal */
+  align-items: center; /* Alineación vertical */
+  margin-bottom: 1rem; /* Margen para separar el contenido */
 }
 
 /* Títulos dentro de cada parte */
 .card-part-title {
-  flex: 1;
+  flex: 1; /* Proporciona espacio igual en todos los elementos */
 }
 
 .card-part-title h3 {
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin: 0;
-  color: #333;
+  font-size: 1.4rem; /* Tamaño de fuente */
+  font-weight: bold; /* Estilo de fuente */
+  margin: 0; /* Elimina márgenes extra */
+  color: #333; /* Color de texto */
 }
 
 /* Títulos activos (cuando están desplegados) */
@@ -236,22 +236,22 @@ button:hover {
 
 /* Botones desplegables */
 .card-part-button {
-  display: flex;
-  justify-content: flex-end;
+  display: flex; /* Alineación de elementos */
+  justify-content: flex-end; /* Alineación horizontal */
 }
 
 .card-part-button button {
   background-color: #f44336; /* Rojo brillante */
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: #fff;  /* Color de texto */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Radio de bordes */
+  width: 32px; /* Tamaño del botón */
+  height: 32px; /* Tamaño del botón */
+  display: flex; /* Alineación de elementos */
+  justify-content: center; /* Alineación horizontal */
+  align-items: center; /* Alineación vertical */
+  cursor: pointer; /* Permite hacer clic en el botón */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animación de transición */
 }
 
 
@@ -269,53 +269,53 @@ button:hover {
 
 /* Contenido desplegable (párrafos) */
 .card-part p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
-  margin-top: 0.5rem;
-  padding-left: 1rem;
+  font-size: 1rem; /* Tamaño de fuente */
+  line-height: 1.6; /* Ajusta la línea de texto */
+  color: #555; /* Color de texto */
+  margin-top: 0.5rem; /* Margen para separar el contenido */
+  padding-left: 1rem; /* Tamaño del contenedor */
   border-left: 4px solid #f44336; /* Línea decorativa en el borde izquierdo */
-  background-color: #fefefe;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  background-color: #fefefe; /* Color de fondo */
+  padding: 0.5rem 1rem; /* Tamaño del contenedor */
+  border-radius: 8px; /* Radio de bordes */
 }
 
 /* Sección derecha: Carta aleatoria */
 .random-card-container {
   flex: 0 0 auto; /* No se redimensiona */
-  text-align: center;
-  max-width: 300px;
+  text-align: center; /* Alineación de texto */
+  max-width: 300px;  /* Ajusta el ancho según el contenido */
 }
 
 /* Estilos para la carta */
 .card {
-  border: 2px solid #ddd;
-  border-radius: 12px;
-  background-color: #fff;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid #ddd; /* Borde */
+  border-radius: 12px; /* Radio de bordes */
+  background-color: #fff; /* Color de fondo */
+  padding: 1rem; /* Tamaño del contenedor */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: transform 0.2s, box-shadow 0.2s; /* Animación de transición */
 }
 
 /* Hover de la carta */
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Animación de transición */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 
 /* Imagen de la carta */
 .card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  max-width: 100%; /* Ajusta el ancho según el contenido */
+  height: auto; /* Ajusta el alto según el contenido */
+  border-radius: 8px; /* Radio de bordes */
+  margin-bottom: 1rem; /* Margen para separar el contenido */
 }
 
 /* Nombre de la carta */
 .card p {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-  margin: 0;
+  font-size: 1.2rem; /* Tamaño de fuente */
+  font-weight: bold; /* Estilo de fuente */
+  color: #333;  /* Color de texto */
+  text-align: center; /* Alineación de texto */
+  margin: 0; /* Elimina márgenes extra */
 }

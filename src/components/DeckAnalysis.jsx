@@ -13,7 +13,7 @@ function DeckAnalysis({ deck = [] }) { // Default deck to an empty array
 
   // Contar la distribución de tipos
   const typeCount = deck.reduce((acc, card) => {
-    // Ensure the card has a types property that is an array
+    // aseguramos que el tipo esté en el objeto
     if (card.types && Array.isArray(card.types)) {
       card.types.forEach((type) => {
         acc[type] = (acc[type] || 0) + 1; // Incrementa el contador del tipo
@@ -23,21 +23,21 @@ function DeckAnalysis({ deck = [] }) { // Default deck to an empty array
   }, {});
 
   return (
-    <div className="deck-analysis" >
-      <h2>Análisis de tu Mazo</h2>
-      <p>Total de cartas: {totalCards}</p>
-      <h3>Distribución de Tipos</h3>
+    <div className="deck-analysis" > {/* Contenedor principal del componente */}
+      <h2>Análisis de tu Mazo</h2> {/*Título del componente*/}
+      <p>Total de cartas: {totalCards}</p> {/*Total de cartas*/}
+      <h3>Distribución de Tipos</h3> 
       <ul>
-        {Object.entries(typeCount).map(([type, count]) => (
-          <li key={type} >
-            {type}: {count} cartas
+        {Object.entries(typeCount).map(([type, count]) => ( // Mapeo de tipos
+          <li key={type} > {/*Clave para identificar el elemento*/}
+            {type}: {count} cartas {/*Tipo y cantidad de cartas*/}
           </li>
         ))}
       </ul>
-      <div className="type-chart">
-        {Object.entries(typeCount).map(([type, count]) => (
-          <div key={type} className="type-bar" style={{ backgroundColor: getrandomColor(), height: `${count * 10}px` }}>
-            {type}
+      <div className="type-chart"> {/* Contenedor para el gráfico de tipos */}
+        {Object.entries(typeCount).map(([type, count]) => ( // Mapeo de tipos
+          <div key={type} className="type-bar" style={{ backgroundColor: getrandomColor(), height: `${count * 10}px` }}> {/*Gráfico de tipos*/}
+            {type} {/*Tipo*/}
           </div>
         ))}
       </div>
@@ -45,4 +45,4 @@ function DeckAnalysis({ deck = [] }) { // Default deck to an empty array
   );
 }
 
-export default DeckAnalysis;
+export default DeckAnalysis; // Exporta el componente

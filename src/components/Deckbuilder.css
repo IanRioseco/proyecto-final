@@ -1,58 +1,58 @@
 .deck-builder-container {
-    margin: 100px;
-    padding: 20px;
-    max-width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 100px;         /* Margen para separar el contenido */
+    padding: 20px;         /* Tamaño del contenido */
+    max-width: 100%;       /* Ajusta el ancho según el contenido */
+    border: 1px solid #ddd; /* Borde */
+    border-radius: 10px;   /* Radio de bordes */
+    background-color: #f9f9f9; /* Color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 h1, h2 {
-    text-align: center;
-    margin-bottom: 15px;
+    text-align: center;     /* Alineación de texto */
+    margin-bottom: 15px;    /* Margen para separar el contenido */
 
 }
 
 .clear-deck-button {
-    padding: 10px 20px;
-    background-color: #ff4c4c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    padding: 10px 20px;     /* Tamaño del botón */
+    background-color: #ff4c4c; /* Color de fondo */
+    color: white;           /* Color de texto */
+    border: none;           /* Sin borde */
+    border-radius: 5px;     /* Radio de bordes */
+    cursor: pointer;        /* Permite hacer clic en el botón */
+    font-size: 16px;        /* Tamaño de fuente */
 }
 
 
 
 .clear-deck-button:hover {
-    background-color: #ff1a1a;
+    background-color: #ff1a1a; /* Color de fondo */
 }
 
 .deck-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;           /* Alineación de elementos */
+    flex-wrap: wrap;         /* Alineación vertical */
     gap: 20px; /* Espaciado entre cartas */
-    justify-content: center;
-    margin: 20px;
+    justify-content: center; /* Alineación horizontal */
+    margin: 20px;            /* Margen para separar el contenido */
     position: relative; /* Manejo de z-index de cartas */
 }
   
 
 .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 10px;
-    transition: transform 0.2s;
+    border: 1px solid #ddd;   /* Borde */
+    border-radius: 8px;      /* Radio de bordes */
+    background-color: white;  /* Color de fondo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center;      /* Alineación de texto */
+    padding: 10px;           /* Tamaño del contenedor */
+    transition: transform 0.2s; /* Animación de transición */
 }
 
 .card img {
     max-width: 100%; /* Asegurar que las imágenes no se salgan del contenedor */
-    height: auto;
+    height: auto;     /* Ajusta el alto según el contenido */
 }
 
 .card:hover {
@@ -61,31 +61,31 @@ h1, h2 {
 }
 
 .card p {
-    margin: 10px 0 0;
-    font-size: 14px;
-    font-weight: bold;
+    margin: 10px 0 0;       /* Margen para separar el contenido */
+    font-size: 14px;        /* Tamaño de fuente */
+    font-weight: bold;      /* Estilo de fuente */
 }
 
 .card-container {
         
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    padding-bottom: 10px;
+    border: 1px solid #ddd;   /* Borde */
+    border-radius: 8px;      /* Radio de bordes */
+    text-align: center;      /* Alineación de texto */
+    background-color: #fff;  /* Color de fondo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 200px;            /* Tamaño del contenedor */
+    padding-bottom: 10px;    /* Tamaño del contenedor */
 }
 
 .card-image img{
-    width: 200px;
-    height: auto;
+    width: 200px;            /* Tamaño del contenedor */
+    height: auto;            /* Ajusta el alto según el contenido */
 }
 
 .clear-deck-button-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    justify-content: center;
-    gap: 30px;
+    display: flex;           /* Alineación de elementos */
+    align-items: center;     /* Alineación vertical */
+    margin-bottom: 20px;     /* Margen para separar el contenido */
+    justify-content: center; /* Alineación horizontal */
+    gap: 30px;               /* Espacio entre los botones */
 }

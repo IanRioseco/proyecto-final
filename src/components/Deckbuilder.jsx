@@ -7,8 +7,8 @@ import Suggestions from "./Suggestions";
 import "./Deckbuilder.css"; // Importamos estilos para personalizar
 import "./DeckAnalysis.css";
 
-function DeckBuilder() {
-  const [deck, setDeck] = useState([]);
+function DeckBuilder() { // Propiedades del componente
+  const [deck, setDeck] = useState([]); // Estado para almacenar el mazo
 
   // Cargar el mazo desde localStorage al iniciar la app
   useEffect(() => {
@@ -23,44 +23,45 @@ function DeckBuilder() {
     localStorage.setItem("pokemonDeck", JSON.stringify(deck));
   }, [deck]);
 
-  const addCardToDeck = (card) => {
-    if (deck.length < 60) {
-      setDeck((prevDeck) => [...prevDeck, card]);
-    } else {
+
+  const addCardToDeck = (card) => { // Función para añadir una carta al mazo
+    if (deck.length < 60) { // Si el mazo no está lleno
+      setDeck((prevDeck) => [...prevDeck, card]); // Añade la carta al mazo
+    } else {  // Si el mazo está lleno
       alert("El mazo no puede tener más de 60 cartas.");
     }
   };
 
-  const removeCardFromDeck = (id) => {
-    setDeck((prevDeck) => prevDeck.filter((card) => card.id !== id));
+  const removeCardFromDeck = (id) => { // Función para eliminar una carta del mazo
+    setDeck((prevDeck) => prevDeck.filter((card) => card.id !== id)); // Elimina la carta del mazo
   };
 
-  const clearDeck = () => {
-    if (window.confirm("¿Estás seguro de que quieres limpiar tu mazo?")) {
-      setDeck([]);
+  const clearDeck = () => { // Función para limpiar el mazo
+    if (window.confirm("¿Estás seguro de que quieres limpiar tu mazo?")) { // Si se confirma
+      setDeck([]); // Limpia el mazo
     }
   };
 
-  return (
-    <div className="deck-builder-container"
-    style={{ backgroundImage: 'url(/assets/backgraund.jpg)' }}>
-      <h1>Construye tu Mazo Pokémon</h1>
-      <CardSearch onAdd={addCardToDeck} />
-      <div className="clear-deck-button-container">
-        <h2>Tu Mazo ({deck.length}/60)</h2>
-        <button className="clear-deck-button" onClick={clearDeck}>
-          Limpiar Mazo
-        </button>
-      </div>
-      <div className="deck-grid">
-        {deck.map((card) => (
-          <Card key={card.id} card={card} onRemove={removeCardFromDeck} />
+  return ( 
+    <div className="deck-builder-container" // Contenedor principal del componente
+    style={{ backgroundImage: 'url(/assets/backgraund.jpg)' }}> {/* Ruta pública de la imagen */}
+      <h1>Construye tu Mazo Pokémon</h1> {/*Título del componente*/}
+      <CardSearch onAdd={addCardToDeck} /> {/*Componente CardSearch*/}
+      <div className="clear-deck-button-container"> {/* Contenedor para el botón de limpieza */}
+        <h2>Tu Mazo ({deck.length}/60)</h2> {/*Título del botón*/}
+        <button className="clear-deck-button" onClick={clearDeck}> {/*Botón para limpiar*/}
+          Limpiar Mazo {/*Texto del botón*/}
+        </button> 
+      </div> 
+      <div className="deck-grid"> {/* Contenedor para la grilla de cartas */}
+        {deck.map((card) => ( // Mapeo de cartas
+          <Card key={card.id} card={card} onRemove={removeCardFromDeck} /> // Clave para identificar la carta
         ))}
       </div>
-      <DeckAnalysis deck={deck} />
-      <Suggestions deck={deck} onAdd={addCardToDeck} />
+      <DeckAnalysis deck={deck} /> {/*Componente DeckAnalysis*/}
+      <Suggestions deck={deck} onAdd={addCardToDeck} /> {/*Componente Suggestions*/}
     </div>
   );
 }
 
-export default DeckBuilder;
+export default DeckBuilder; // Exporta el componente

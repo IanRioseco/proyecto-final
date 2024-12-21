@@ -39,43 +39,43 @@ function Home() {
 
   return (
     <section
-      id="home"
-      className="home-container"
+      id="home" // ID del componente
+      className="home-container" // Clase para el componente
       style={{ backgroundImage: 'url(/assets/backgraund.jpg)' }} // Ruta pública de la imagen
     >
-      {/* Carrusel - Primero */}
-      <div className="carrusel-section">
+      {/* Carrusel - Primero */} 
+      <div className="carrusel-section"> {/* Contenedor para el componente Carrusel */}
         <Carrusel interval={3000} /> {/* Carrusel al inicio */}
       </div>
 
       {/* Sección Hero */}
-      <div className="hero">
-        <div className="hero-text">
+      <div className="hero"> {/* Contenedor para la sección Hero */}
+        <div className="hero-text"> {/* Contenedor para el texto de la sección Hero */}
           <h1>¡Crea, Organiza y Domina con PokéMazo!</h1>
           <p>Construye el mazo perfecto para tus batallas Pokémon y lleva tu estrategia al siguiente nivel.</p>
         </div>
-        <div className="hero-image">
-          <img src="/assets/hero-banner.png" alt="Pokémon Cards Banner" />
+        <div className="hero-image"> {/* Contenedor para la imagen de la sección Hero */}
+          <img src="/assets/hero-banner.png" alt="Pokémon Cards Banner" /> {/* Imagen de la sección Hero */}
         </div>
       </div>
 
       {/* Características principales */}
-      <div className="features">
-        <h2>Características</h2>
-        <div className="features-grid">
-          <div className="feature">
-            <img src="/assets/deck.png" alt="Icono Mazo" />
+      <div className="features"> {/* Contenedor para las características principales */}
+        <h2>Características</h2> {/*Título de las características*/}
+        <div className="features-grid"> {/* Contenedor para la grilla de características */}
+          <div className="feature"> {/* Contenedor para una característica */}
+            <img src="/assets/deck.png" alt="Icono Mazo" /> {/*Imagen de la característica*/}
             <h3>Crea tu Mazo</h3>
             <p>Elige entre una amplia variedad de cartas Pokémon y crea tu mazo personalizado para tus batallas.</p>
           </div>
-          <div className="feature">
-            <img src="/assets/suggestions.png" alt="Icono Sugerencias" />
-            <h3>Obtén Sugerencias</h3>
+          <div className="feature"> {/* Contenedor para una característica */}
+            <img src="/assets/suggestions.png" alt="Icono Sugerencias" /> {/*Imagen de la característica*/}
+            <h3>Obtén Sugerencias</h3> 
             <p>Recibe recomendaciones de cartas clave para mejorar tu estrategia y hacer tu mazo más competitivo.</p>
           </div>
-          <div className="feature">
-            <img src="/assets/manage.png" alt="Icono Organización" />
-            <h3>Organiza tu Mazo</h3>
+          <div className="feature"> {/* Contenedor para una característica */}
+            <img src="/assets/manage.png" alt="Icono Organización" /> {/*Imagen de la característica*/}
+            <h3>Organiza tu Mazo</h3> 
             <p>Administra tus cartas de manera eficiente para que siempre estés listo para el próximo combate.</p>
           </div>
         </div>
@@ -83,26 +83,26 @@ function Home() {
 
 
       {/* Nueva Sección - Partes de una Carta de JCC Pokémon */}
-      <div className="card-parts">
-        <div className="card-parts-title">
+      <div className="card-parts"> {/* Contenedor para la sección de las partes de una carta de JCC Pokémon */}
+        <div className="card-parts-title"> {/* Contenedor para el título de la sección */}
           <h2>¿Cuáles son las partes de una carta de JCC Pokémon?</h2>
         </div>
 
-        <div className="card-parts-content">
-          {/* Información de las partes */}
-          <div className="info-sections">
-            {/* Parte 1 */}
-            <div className="card-part">
-              <div className="card-part-header">
-                <div className="card-part-title">
+        <div className="card-parts-content"> {/* Contenedor para el contenido de la sección */}
+          {/* Información de las partes */} 
+          <div className="info-sections"> {/* Contenedor para la información de las partes */}
+            {/* Parte 1 */} 
+            <div className="card-part"> {/* Contenedor para la parte 1 */}
+              <div className="card-part-header"> {/* Contenedor para el encabezado de la parte 1 */}
+                <div className="card-part-title"> {/* Contenedor para el título de la parte 1 */}
                   <h3> Nombre de la carta</h3>
                 </div>
-                <div className="card-part-button">
+                <div className="card-part-button"> {/* Contenedor para el botón de la parte 1 */}
                   <button
-                    onClick={() => toggleInfo('nombre')}
-                    className={`toggle-button ${showInfo.nombre ? 'active' : ''}`}
+                    onClick={() => toggleInfo('nombre')} // Función para alternar la información
+                    className={`toggle-button ${showInfo.nombre ? 'active' : ''}`} // Clase para activar o desactivar la información
                   >
-                    {showInfo.nombre ? '-' : '+'}
+                    {showInfo.nombre ? '-' : '+'} {/* Texto del botón */}
                   </button>
                 </div>
               </div>
@@ -112,17 +112,17 @@ function Home() {
             </div>
 
             {/* Parte 2 */}
-            <div className="card-part">
-              <div className="card-part-header">
-                <div className="card-part-title">
+            <div className="card-part"> {/* Contenedor para la parte 2 */}
+              <div className="card-part-header"> {/* Contenedor para el encabezado de la parte 2 */}
+                <div className="card-part-title"> {/* Contenedor para el título de la parte 2 */}
                   <h3>Tipo del Pokémon y PS</h3>
                 </div>
-                <div className="card-part-button">
-                  <button
-                    onClick={() => toggleInfo('tipo')}
-                    className={`toggle-button ${showInfo.tipo ? 'active' : ''}`}
+                <div className="card-part-button"> {/* Contenedor para el botón de la parte 2 */}
+                  <button 
+                    onClick={() => toggleInfo('tipo')} // Función para alternar la información
+                    className={`toggle-button ${showInfo.tipo ? 'active' : ''}`} // Clase para activar o desactivar la información
                   >
-                    {showInfo.tipo ? '-' : '+'}
+                    {showInfo.tipo ? '-' : '+'} {/* Texto del botón */}
                   </button>
                 </div>
               </div>
@@ -132,15 +132,15 @@ function Home() {
             </div>
 
             {/* Parte 3 */}
-            <div className="card-part">
-              <div className="card-part-header">
-                <div className="card-part-title">
+            <div className="card-part"> {/* Contenedor para la parte 3 */}
+              <div className="card-part-header"> {/* Contenedor para el encabezado de la parte 3 */}
+                <div className="card-part-title"> {/* Contenedor para el título de la parte 3 */}
                   <h3>Ataques</h3>
                 </div>
-                <div className="card-part-button">
+                <div className="card-part-button"> {/* Contenedor para el botón de la parte 3 */}
                   <button
-                    onClick={() => toggleInfo('ataques')}
-                    className={`toggle-button ${showInfo.ataques ? 'active' : ''}`}
+                    onClick={() => toggleInfo('ataques')} // Función para alternar la información
+                    className={`toggle-button ${showInfo.ataques ? 'active' : ''}`} // Clase para activar o desactivar la información
                   >
                     {showInfo.ataques ? '-' : '+'}
                   </button>
@@ -152,15 +152,15 @@ function Home() {
             </div>
 
             {/* Parte 4 */}
-            <div className="card-part">
-              <div className="card-part-header">
-                <div className="card-part-title">
+            <div className="card-part"> {/* Contenedor para la parte 4 */}
+              <div className="card-part-header"> {/* Contenedor para el encabezado de la parte 4 */}
+                <div className="card-part-title"> {/* Contenedor para el título de la parte 4 */}
                   <h3>Coste de Retirada</h3>
                 </div>
-                <div className="card-part-button">
+                <div className="card-part-button"> {/* Contenedor para el botón de la parte 4 */}
                   <button
-                    onClick={() => toggleInfo('retirada')}
-                    className={`toggle-button ${showInfo.retirada ? 'active' : ''}`}
+                    onClick={() => toggleInfo('retirada')} // Función para alternar la información
+                    className={`toggle-button ${showInfo.retirada ? 'active' : ''}`} // Clase para activar o desactivar la información
                   >
                     {showInfo.retirada ? '-' : '+'}
                   </button>
@@ -173,10 +173,10 @@ function Home() {
           </div>
 
           {/* Carta aleatoria */}
-          <div className="random-card-container">
+          <div className="random-card-container"> {/* Contenedor para la carta aleatoria */}
             {randomCard ? (
-              <div className="card">
-                <img src={randomCard.images.large} alt={randomCard.name} />
+              <div className="card"> {/* Contenedor para la carta */}
+                <img src={randomCard.images.large} alt={randomCard.name} /> {/* Imagen de la carta */}
                 <p>{randomCard.name}</p>
               </div>
             ) : (
@@ -189,4 +189,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home; // Exporta el componente

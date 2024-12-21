@@ -1,30 +1,30 @@
 .deck-analysis {
-    border: 1px solid #ccc;
-    padding: 16px;
-    border-radius: 8px;
-    margin: 16px 0;
-    background-color: white;
+    border: 1px solid #ccc; /*Border para separar el contenido*/
+    padding: 16px; /*Tamaño del contenido*/
+    border-radius: 8px; /*Radio de bordes*/
+    margin: 16px 0; /*Margen para separar el contenido*/
+    background-color: white; /*Color de fondo*/
 }
 
 .type-chart {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px;
-    margin: 16px;
+    display: flex; /*Alineación de elementos*/
+    align-items: flex-start;    /*Alineación vertical*/
+    flex-wrap: wrap; /*Alineación horizontal*/
+    justify-content: space-around; /*Alineación de elementos*/
+    gap: 10px;    /*Espacio entre elementos*/
+    margin: 16px; /*Margen para separar el contenido*/
 }
 
 .type-bar {
-    width: 100px;
-    margin: 4px 0;
-    border-radius: 4px;
-    transition: height 0.3s ease;
+    width: 100px; /*Tamaño de la barra*/
+    margin: 4px 0; /*Margen para separar las barras*/
+    border-radius: 4px; /*Radio de bordes*/
+    transition: height 0.3s ease; /*Animación de altura*/
 }
 
 .deck-analysis p {
-    margin-top: 16px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
+    margin-top: 16px; /*Margen para separar el contenido*/
+    font-size: 14px; /*Tamaño de fuente*/
+    font-weight: bold; /*Estilo de fuente*/
+    text-align: center; /*Alineación de texto*/
 }

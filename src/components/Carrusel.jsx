@@ -36,21 +36,21 @@ const Carrusel = ({ interval = 2600 }) => {
   };
 
   return (
-    <div className="carrusel-container">
-      <button className="prev-btn" onClick={prevImage}>
-        &lt;
-      </button>
-      <div className="carrusel-image">
-        <img src={images[currentIndex]} alt={`Imagen ${currentIndex + 1}`} />
+    <div className="carrusel-container">  {/* Contenedor principal del componente*/}
+      <button className="prev-btn" onClick={prevImage}>  {/* Botón para ir a la imagen anterior*/}
+        &lt;    
+      </button> {/* Botón para ir a la imagen anterior*/}
+      <div className="carrusel-image"> {/* Contenedor para la imagen */}
+        <img src={images[currentIndex]} alt={`Imagen ${currentIndex + 1}`} /> {/* Imagen actual */}
       </div>
-      <button className="next-btn" onClick={nextImage}>
-        &gt;
-      </button>
-      <div className="button-container">
-        <button className="gallery-btn">Ver la Galería de Cartas</button>
+      <button className="next-btn" onClick={nextImage}>  {/* Botón para ir a la siguiente imagen*/}
+        &gt; 
+      </button> {/* Botón para ir a la siguiente imagen*/}
+      <div className="button-container">  {/* Contenedor para los botones*/}
+        <button className="gallery-btn">Ver la Galería de Cartas</button> {/* Botón para ver la galería de cartas*/}
       </div>
     </div>  
   );
 };
 
-export default Carrusel;
+export default Carrusel; // Exporta el componente

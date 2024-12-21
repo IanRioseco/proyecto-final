@@ -2,12 +2,12 @@ header {
   position: fixed;
   top: 0; /* Fija el header en la parte superior */
   width: 100%; /* Asegura que ocupe todo el ancho */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #000000;
-  color: #333333;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Alineación de elementos */
+  flex-direction: column; /* Alineación vertical */
+  align-items: center; /* Alineación vertical */
+  background-color: #000000; /* Color de fondo */
+  color: #333333; /* Color de texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
@@ -16,13 +16,13 @@ header {
 }
 
 nav {
-  width: 100%;
+  width: 100%; /* Ajusta el ancho según el contenido */
 }
 
 nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
+  list-style-type: none; /* Elimina el marcador de lista */
+  display: flex; /* Alineación de elementos */
+  justify-content: center; /* Alineación horizontal */
   margin: 0; /* Elimina márgenes extra */
   padding: 10px; /* Reduce el padding */
 }
@@ -32,30 +32,30 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
-  text-decoration: none;
+  color: #fff; /* Color de texto */
+  text-decoration: none; /* Sin subrayado */
   font-size: 1rem; /* Reduce el tamaño de la fuente */
-  font-weight: bold;
-  transition: color 0.3s ease;
+  font-weight: bold; /* Estilo de fuente */
+  transition: color 0.3s ease; /* Animación de transición */
 }
 
 nav ul li a:hover {
-  color: #fd0a02;
+  color: #fd0a02; /* Color de texto al pasar el mouse */
 }
 
 /* Estilos para imágenes Header */
 .imagesHeader {
-  display: flex;
-  justify-content: center;
-  width: 95%;
-  align-items: center;
+  display: flex; /* Alineación de elementos */
+  justify-content: center; /* Alineación horizontal */
+  width: 95%; /* Ajusta el ancho según el contenido */
+  align-items: center; /* Alineación vertical */
 }
 
 /* Ajusta el layout en pantallas pequeñas */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 768px) { 
+  nav ul { /* Alineación de elementos */
+    flex-direction: column; /* Alineación vertical */
+    align-items: center;  /* Alineación vertical */
   }
 
   nav ul li {

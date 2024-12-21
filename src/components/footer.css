@@ -1,72 +1,72 @@
 footer {
     background-color: #000000; /* Fondo negro */
     color: #FFD700; /* Texto en amarillo */
-    padding: 40px 20px;
-    text-align: center;
-  }
+    padding: 40px 20px; /* Tamaño del contenido */
+    text-align: center; /* Alineación de texto */
+  } 
   
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex; /* Alineación de elementos */
+    justify-content: space-between; /* Alineación horizontal */
+    align-items: center; /* Alineación vertical */
+    flex-wrap: wrap; /* Alineación vertical */
+    max-width: 1200px; /* Ajusta el ancho según el contenido */
+    margin: 0 auto; /* Centra el contenedor en la página */
   }
   
   .footer-left, .footer-middle, .footer-right {
-    flex: 1;
-    padding: 10px;
+    flex: 1; /* Proporciona espacio igual en todos los elementos */
+    padding: 10px; /* Tamaño del contenido */
   }
   
   .footer-left h3 {
-    display: flex;
-    align-items: center;
-    font-size: 1.3rem;
+    display: flex; /* Alineación de elementos */
+    align-items: center; /* Alineación vertical */
+    font-size: 1.3rem; /* Tamaño de fuente ajustable */
   }
   
   .footer-logo {
     width: 120px; /* Ajusta el tamaño según lo necesites */
-    height: auto;
+    height: auto; /* Ajusta el tamaño según lo necesites */
     margin-right: 10px; /* Espacio entre el logo y el texto */
   }
   
   .footer-left p {
-    font-size: 16px;
+    font-size: 16px; /* Tamaño de fuente */
   }
   
   .footer-middle h4, .footer-right h4 {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold; /* Estilo de fuente */
   }
   
   .footer-middle ul, .footer-right ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Elimina el marcador de lista */
+    padding: 0; /* Elimina el espacio entre elementos */
   }
   
   .footer-middle li, .footer-right li {
-    margin: 10px 0;
+    margin: 10px 0; /* Margen para separar el contenido */
   }
   
   .footer-middle a, .footer-right a {
-    color: #FFD700;
-    text-decoration: none;
-    font-size: 16px;
+    color: #FFD700; /* Texto en amarillo */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de fuente */
   }
   
   .footer-middle a:hover, .footer-right a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Subrayado */
   }
   
-  @media screen and (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;
-      align-items: center;
-    }
-    .footer-left, .footer-middle, .footer-right {
-      flex: none;
-      text-align: center;
+  @media screen and (max-width: 768px) { /* Media query para dispositivos móviles */
+    .footer-content { /* Alineación de elementos */
+      flex-direction: column; /* Alineación vertical */
+      align-items: center;  /* Alineación vertical */
+    } 
+    .footer-left, .footer-middle, .footer-right { /* Alineación de elementos */
+      flex: none; /* Elimina espacio igual en todos los elementos */
+      text-align: center; /* Alineación de texto */
     }
   }
   

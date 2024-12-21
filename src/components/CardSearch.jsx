@@ -21,15 +21,15 @@ function CardSearch({ onAdd }) {
             
             // Limpia el mensaje después de 10 segundos
             setTimeout(() => {
-                setMensaje('');
-            }, 10000);
-        } catch (error) {
-            console.error("Error al buscar cartas:", error);
+                setMensaje(''); // Limpia el mensaje
+            }, 10000); // Tiempo de espera
+        } catch (error) { // Si ocurre algún error
+            console.error("Error al buscar cartas: ", error); // Mostrar el error en la consola
         }
     };
 
     // Botón para retroceder
-    const handlePrev = () => {
+    const handlePrev = () => { 
         setCurrentIndex((prevIndex) => Math.max(prevIndex - CARDS_PER_PAGE, 0));
     };
 
@@ -41,42 +41,43 @@ function CardSearch({ onAdd }) {
     };
 
     return (
-        <div className="card-search">
+        <div className="card-search"> {/* Contenedor principal del componente */}
             {/* Barra de búsqueda */}
-            <div className="search-controls">
+            <div className="search-controls"> {/* Contenedor para la barra de búsqueda */}
                 <input
-                    type="text"
-                    placeholder="Busca un Pokémon por su nombre"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
+                    type="text" // Tipo de entrada
+                    placeholder="Busca un Pokémon por su nombre" // Texto de ejemplo
+                    value={search} // Valor del campo de texto
+                    onChange={(e) => setSearch(e.target.value)} // Función para actualizar el valor del campo de texto
                 />
-                <button onClick={fetchCards}>Buscar</button>
+                <button onClick={fetchCards}>Buscar</button>    {/* Botón para buscar */}
             </div>
             {mensaje && <p className="search-message">{mensaje}</p>} {/* Muestra el mensaje si existe */}
 
             {/* Slider de cartas */}
-            <div className="slider-container">
-                <button
-                    className="nav-button"
-                    onClick={handlePrev}
-                    disabled={currentIndex === 0}
+            <div className="slider-container"> {/* Contenedor para el slider de cartas */}
+                <button // Botón para retroceder
+                    className="nav-button" // Clase para el botón
+                    onClick={handlePrev} // Función para retroceder
+                    disabled={currentIndex === 0} // Si el índice actual es 0
                 >
                     ◀
                 </button>
 
-                <div className="cards-grid">
-                    {cards.slice(currentIndex, currentIndex + CARDS_PER_PAGE).map((card) => (
-                        <div key={card.id} className="card-item">
-                            <img src={card.images.large} alt={card.name} loading="lazy" />
-                            <button onClick={() => onAdd(card)}>Añadir al Mazo</button>
+                <div className="cards-grid"> {/* Contenedor para la grilla de cartas */}
+
+                    {cards.slice(currentIndex, currentIndex + CARDS_PER_PAGE).map((card) => ( // Mapeo de cartas
+                        <div key={card.id} className="card-item"> {/* Clave para identificar la carta */}
+                            <img src={card.images.large} alt={card.name} loading="lazy" /> {/* Imagen de la carta */}
+                            <button onClick={() => onAdd(card)}>Añadir al Mazo</button> {/* Botón para añadir a la mazo */}
                         </div>
                     ))}
                 </div>
 
-                <button
-                    className="nav-button"
-                    onClick={handleNext}
-                    disabled={currentIndex + CARDS_PER_PAGE >= cards.length}
+                <button // Botón para avanzar
+                    className="nav-button" // Clase para el botón
+                    onClick={handleNext} // Función para avanzar
+                    disabled={currentIndex + CARDS_PER_PAGE >= cards.length} // Si el índice actual es el final
                 >
                     ▶
                 </button>
@@ -85,4 +86,4 @@ function CardSearch({ onAdd }) {
     );
 }
 
-export default CardSearch;
+export default CardSearch; // Exporta el componente
