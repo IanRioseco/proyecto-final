@@ -96,6 +96,7 @@ function Home() {
               <div className="card-part-header"> {/* Contenedor para el encabezado de la parte 1 */}
                 <div className="card-part-title"> {/* Contenedor para el título de la parte 1 */}
                   <h3> Nombre de la carta</h3>
+<<<<<<< HEAD
                 </div>
                 <div className="card-part-button"> {/* Contenedor para el botón de la parte 1 */}
                   <button
@@ -104,11 +105,11 @@ function Home() {
                   >
                     {showInfo.nombre ? '-' : '+'} {/* Texto del botón */}
                   </button>
+=======
+                  <p>En el formato de juego Estándar, puedes tener un máximo de cuatro cartas con el mismo nombre en tu baraja. Las cartas de Energía son la excepción a esta regla.</p>
+>>>>>>> 38b597aeaedb500b60ec8ef9282ab2b9fc3f6562
                 </div>
               </div>
-              {showInfo.nombre && (
-                <p>En el formato de juego Estándar, puedes tener un máximo de cuatro cartas con el mismo nombre en tu baraja. Las cartas de Energía son la excepción a esta regla.</p>
-              )}
             </div>
 
             {/* Parte 2 */}
@@ -116,6 +117,7 @@ function Home() {
               <div className="card-part-header"> {/* Contenedor para el encabezado de la parte 2 */}
                 <div className="card-part-title"> {/* Contenedor para el título de la parte 2 */}
                   <h3>Tipo del Pokémon y PS</h3>
+<<<<<<< HEAD
                 </div>
                 <div className="card-part-button"> {/* Contenedor para el botón de la parte 2 */}
                   <button 
@@ -124,11 +126,11 @@ function Home() {
                   >
                     {showInfo.tipo ? '-' : '+'} {/* Texto del botón */}
                   </button>
+=======
+                  <p>Indica el tipo del Pokémon y cuánto daño puede recibir antes de quedar Fuera de Combate. Cada Pokémon tiene su propia Debilidad y Resistencia, recogidas en la parte inferior de la carta. Recuerda esto cuando te prepares para tu próximo combate.</p>
+>>>>>>> 38b597aeaedb500b60ec8ef9282ab2b9fc3f6562
                 </div>
               </div>
-              {showInfo.tipo && (
-                <p>Indica el tipo del Pokémon y cuánto daño puede recibir antes de quedar Fuera de Combate. Cada Pokémon tiene su propia Debilidad y Resistencia, recogidas en la parte inferior de la carta. Recuerda esto cuando te prepares para tu próximo combate.</p>
-              )}
             </div>
 
             {/* Parte 3 */}
@@ -136,6 +138,7 @@ function Home() {
               <div className="card-part-header"> {/* Contenedor para el encabezado de la parte 3 */}
                 <div className="card-part-title"> {/* Contenedor para el título de la parte 3 */}
                   <h3>Ataques</h3>
+<<<<<<< HEAD
                 </div>
                 <div className="card-part-button"> {/* Contenedor para el botón de la parte 3 */}
                   <button
@@ -144,11 +147,11 @@ function Home() {
                   >
                     {showInfo.ataques ? '-' : '+'}
                   </button>
+=======
+                  <p>Indica el tipo del Pokémon y cuánto daño puede recibir antes de quedar Fuera de Combate. Cada Pokémon tiene su propia Debilidad y Resistencia, recogidas en la parte inferior de la carta. Recuerda esto cuando te prepares para tu próximo combate.</p>
+>>>>>>> 38b597aeaedb500b60ec8ef9282ab2b9fc3f6562
                 </div>
               </div>
-              {showInfo.ataques && (
-                <p>Para llevar a cabo un ataque, debes tener unida al Pokémon la cantidad y el tipo de Energía que se indica aquí. El número a la derecha muestra cuánto daño hará el ataque al Pokémon Activo del rival.</p>
-              )}
             </div>
 
             {/* Parte 4 */}
@@ -156,6 +159,7 @@ function Home() {
               <div className="card-part-header"> {/* Contenedor para el encabezado de la parte 4 */}
                 <div className="card-part-title"> {/* Contenedor para el título de la parte 4 */}
                   <h3>Coste de Retirada</h3>
+<<<<<<< HEAD
                 </div>
                 <div className="card-part-button"> {/* Contenedor para el botón de la parte 4 */}
                   <button
@@ -164,11 +168,12 @@ function Home() {
                   >
                     {showInfo.retirada ? '-' : '+'}
                   </button>
+=======
+                  <p>Esta es la cantidad de Energía necesaria para retirar a tus Pokémon del Puesto Activo a la Banca. Para realizar esta acción, debes descartar dicha cantidad de Energía del Pokémon Activo y sustituirlo por un Pokémon de tu Banca.</p>
+>>>>>>> 38b597aeaedb500b60ec8ef9282ab2b9fc3f6562
                 </div>
               </div>
-              {showInfo.retirada && (
-                <p>Esta es la cantidad de Energía necesaria para retirar a tus Pokémon del Puesto Activo a la Banca. Para realizar esta acción, debes descartar dicha cantidad de Energía del Pokémon Activo y sustituirlo por un Pokémon de tu Banca.</p>
-              )}
+
             </div>
           </div>
 
