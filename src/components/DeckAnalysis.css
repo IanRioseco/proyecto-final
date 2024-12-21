@@ -10,14 +10,13 @@
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 16px;
+    justify-content: space-around;
+    gap: 10px;
     margin: 16px;
 }
 
 .type-bar {
     width: 100px;
-    background-color: #76c7c0;
     margin: 4px 0;
     border-radius: 4px;
     transition: height 0.3s ease;

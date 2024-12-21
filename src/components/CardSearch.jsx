@@ -8,7 +8,7 @@ function CardSearch({ onAdd }) {
     const [currentIndex, setCurrentIndex] = useState(0); // Índice del slider
     const [mensaje, setMensaje] = useState(''); // Estado para el mensaje
 
-    const CARDS_PER_PAGE = 12; // Mostrar 8 cartas por página (2 filas de 4)
+    const CARDS_PER_PAGE = 8; // Mostrar 8 cartas por página (2 filas de 4)
 
     // Función para obtener las cartas de la API
     const fetchCards = async () => {

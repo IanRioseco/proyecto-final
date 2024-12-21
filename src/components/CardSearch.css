@@ -63,11 +63,13 @@
 
 /* Grid para mostrar cartas */
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajuste automático de columnas */
+    display: flex;
+    grid-template-columns: repeat(2, minmax(180px, 1fr)); /* Ajuste automático de columnas */
     gap: 20px; /* Espacio entre las cartas */
     width: 100%;
-    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 /* Estilo de las cartas */
@@ -115,11 +117,6 @@
     opacity: 1; /* Mostrar al pasar el mouse */
 }
 
-.card-item button:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 .card-search button {
     position: relative;
