@@ -1,3 +1,10 @@
+/* carrusel.css */
+/**
+ * Estilos para la sección del carrusel
+ *
+ * Este archivo contiene los estilos para la sección del carrusel.
+ * Utiliza Flexbox para una disposición responsiva y organizada.
+ */
 .carrusel-container {
   display: flex; /* Alineación de elementos */
   justify-content: center; /* Alineación horizontal */
@@ -10,6 +17,8 @@
   margin-top: 150px; /* Ajusta este valor según la altura del header */
   overflow: hidden; /* Evita que el contenido se salga del contenedor */
 }
+
+/* Contenedor principal del componente */
 
 .carrusel-image img {
   width: 100%; /* Ajusta el ancho según el contenido */

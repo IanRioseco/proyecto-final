@@ -9,7 +9,7 @@ function Header() {
       <div className='imagesHeader'> {/* Contenedor para las imágenes de la cabecera */}
 
       <img src={`${process.env.PUBLIC_URL}/assets/poketitulo.png`} alt='poketitulo' className='poketitulo'/>
-      {/* Imagen de la cabecera */}
+
 
       </div>
       <nav>

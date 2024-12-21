@@ -9,6 +9,7 @@
     margin-bottom: 20px;    /* Margen para separar el contenido */
 }
 
+/* Contenedor principal del componente */
 .search-controls input {
     padding: 8px;           /* Tamaño del campo */
     width: 200px;           /* Tamaño del campo */
@@ -17,6 +18,7 @@
     border: 1px solid #ccc; /* Borde */
 }
 
+/* Contenedor principal del componente */
 .search-controls button {
     padding: 8px 12px;      /* Tamaño del botón */
     border: none;           /* Sin borde */
@@ -27,6 +29,7 @@
     transition: all 0.3s ease; /* Animación de transición */
 }
 
+/* Contenedor principal del componente */
 .search-controls button:hover {
     transform: translateY(-5px);    /* Animación de transición */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
@@ -52,10 +55,12 @@
     transition: background-color 0.3s ease; /* Animación de transición */
 }
 
+/* Contenedor principal del componente */
 .nav-button:hover {
     background-color: #ddd; /* Color de fondo */
 }
 
+/* Contenedor principal del componente */
 .nav-button:disabled {
     opacity: 0.5;         /* Opacidad */
     cursor: not-allowed;   /* Cursor */
@@ -85,6 +90,7 @@
     width: 180px; /* Asegura que todas las cartas tengan el mismo ancho */
 }
 
+/* Contenedor principal del componente */
 .card-item:hover {
     transform: translateY(-5px); /* Animación de transición */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
@@ -113,16 +119,18 @@
     transition: opacity 0.3s ease; /* Animación de transición */
 }
 
+/* Contenedor principal del componente */
 .card-item:hover button {
     opacity: 1; /* Mostrar al pasar el mouse */
 }
 
-
+/* Contenedor principal del componente */
 .card-search button {
     position: relative;     /* Posiciona el botón */
     display: inline-block; /* Evita botones flotantes en posiciones incorrectas */
 }
 
+/* Contenedor principal del componente */
 .cards-grid button {
     position: absolute; /* Asegura que solo los botones en las cartas sigan este estilo */
 }

@@ -31,16 +31,15 @@ function Suggestions({ deck, onAdd }) {
       ); 
       setSuggestedCards(response.data.data.slice(0, 4)); // Obtiene las primeras 4 cartas sugeridas
     } catch (error) { // Si ocurre algún error
-      console.error("Error obtaining suggestions:", error); // Mostrar el error en la consola
+      console.error("Error obtaining suggestions:", error);
     }
-  }, [deck]); // Include deck as a dependency for the callback
+  }, [deck]); 
 
   useEffect(() => { // Función para ejecutar la función de obtención de sugerencias cuando el mazo cambie
-    if (deck.length > 0) { // Si el mazo no está vacío
+    if (deck.length > 0) { 
         getSuggestions(); // Obtiene las sugerencias
     }
 }, [deck, getSuggestions]);
- // Include getSuggestions in the dependency array
 
   return (
     <div className="suggestions-container"> {/* Contenedor principal del componente */}
@@ -50,10 +49,10 @@ function Suggestions({ deck, onAdd }) {
       ) : (
         <div className="suggestions"> {/* Contenedor para las sugerencias */}
           {suggestedCards.map((card) => ( // Mapeo de cartas
-            <div key={card.id} className="suggestion-card"> {/* Clave para identificar la carta */}
-              <img src={card.images.large} alt={card.name} loading="lazy" /> {/* Imagen de la carta */}
-              <p>{card.name}</p> {/* Nombre de la carta */}
-              <button className="suggestions-button" onClick={() => onAdd(card)}> {/* Botón para añadir a la mazo */}
+            <div key={card.id} className="suggestion-card"> 
+              <img src={card.images.large} alt={card.name} loading="lazy" /> 
+              <p>{card.name}</p> 
+              <button className="suggestions-button" onClick={() => onAdd(card)}> 
                 Añadir al Mazo
               </button>
             </div>

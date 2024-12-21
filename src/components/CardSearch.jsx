@@ -21,8 +21,8 @@ function CardSearch({ onAdd }) {
             
             // Limpia el mensaje después de 10 segundos
             setTimeout(() => {
-                setMensaje(''); // Limpia el mensaje
-            }, 10000); // Tiempo de espera
+                setMensaje('');
+            }, 10000); 
         } catch (error) { // Si ocurre algún error
             console.error("Error al buscar cartas: ", error); // Mostrar el error en la consola
         }
@@ -42,12 +42,11 @@ function CardSearch({ onAdd }) {
 
     return (
         <div className="card-search"> {/* Contenedor principal del componente */}
-            {/* Barra de búsqueda */}
             <div className="search-controls"> {/* Contenedor para la barra de búsqueda */}
                 <input
-                    type="text" // Tipo de entrada
-                    placeholder="Busca un Pokémon por su nombre" // Texto de ejemplo
-                    value={search} // Valor del campo de texto
+                    type="text" 
+                    placeholder="Busca un Pokémon por su nombre"
+                    value={search}
                     onChange={(e) => setSearch(e.target.value)} // Función para actualizar el valor del campo de texto
                 />
                 <button onClick={fetchCards}>Buscar</button>    {/* Botón para buscar */}
@@ -56,9 +55,9 @@ function CardSearch({ onAdd }) {
 
             {/* Slider de cartas */}
             <div className="slider-container"> {/* Contenedor para el slider de cartas */}
-                <button // Botón para retroceder
-                    className="nav-button" // Clase para el botón
-                    onClick={handlePrev} // Función para retroceder
+                <button
+                    className="nav-button" 
+                    onClick={handlePrev} 
                     disabled={currentIndex === 0} // Si el índice actual es 0
                 >
                     ◀
@@ -74,10 +73,10 @@ function CardSearch({ onAdd }) {
                     ))}
                 </div>
 
-                <button // Botón para avanzar
-                    className="nav-button" // Clase para el botón
-                    onClick={handleNext} // Función para avanzar
-                    disabled={currentIndex + CARDS_PER_PAGE >= cards.length} // Si el índice actual es el final
+                <button
+                    className="nav-button" 
+                    onClick={handleNext}
+                    disabled={currentIndex + CARDS_PER_PAGE >= cards.length}
                 >
                     ▶
                 </button>
