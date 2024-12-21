@@ -1,0 +1,64 @@
+/* help.css */
+/**
+ * Estilos de la página de Ayuda
+ *
+ * Este archivo contiene los estilos específicos para la página de ayuda.
+ * Utiliza Flexbox para una disposición responsiva y organizada.
+ */
+
+/**
+ * Contenedor principal de la página de ayuda
+ *
+ * Ajusta el contenido para que comience después del navbar fijo.
+ */
+ .help-container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: #F7F7F7;
+    padding-top: 50px;
+    margin-top: 200px;
+} /* Ajusta este valor según la altura del header */
+
+/**
+ * Encabezado de la página de ayuda
+ *
+ * Define un estilo prominente para el encabezado principal,
+ * con un margen inferior para separar del contenido.
+ */
+.help-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.help-header h1 {
+    font-size: 2.5rem;
+    color: #0073e6;
+}
+
+/**
+ * Secciones de ayuda
+ *
+ * Cada sección está contenida en un bloque separado con un margen inferior.
+ */
+.help-section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.help-section h2 {
+    font-size: 1.5rem;
+    color: #005bb5;
+    margin-bottom: 10px;
+}
+
+.help-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}

@@ -96,19 +96,9 @@ function Home() {
               <div className="card-part-header">
                 <div className="card-part-title">
                   <h3> Nombre de la carta</h3>
-                </div>
-                <div className="card-part-button">
-                  <button
-                    onClick={() => toggleInfo('nombre')}
-                    className={`toggle-button ${showInfo.nombre ? 'active' : ''}`}
-                  >
-                    {showInfo.nombre ? '-' : '+'}
-                  </button>
+                  <p>En el formato de juego Estándar, puedes tener un máximo de cuatro cartas con el mismo nombre en tu baraja. Las cartas de Energía son la excepción a esta regla.</p>
                 </div>
               </div>
-              {showInfo.nombre && (
-                <p>En el formato de juego Estándar, puedes tener un máximo de cuatro cartas con el mismo nombre en tu baraja. Las cartas de Energía son la excepción a esta regla.</p>
-              )}
             </div>
 
             {/* Parte 2 */}
@@ -116,19 +106,9 @@ function Home() {
               <div className="card-part-header">
                 <div className="card-part-title">
                   <h3>Tipo del Pokémon y PS</h3>
-                </div>
-                <div className="card-part-button">
-                  <button
-                    onClick={() => toggleInfo('tipo')}
-                    className={`toggle-button ${showInfo.tipo ? 'active' : ''}`}
-                  >
-                    {showInfo.tipo ? '-' : '+'}
-                  </button>
+                  <p>Indica el tipo del Pokémon y cuánto daño puede recibir antes de quedar Fuera de Combate. Cada Pokémon tiene su propia Debilidad y Resistencia, recogidas en la parte inferior de la carta. Recuerda esto cuando te prepares para tu próximo combate.</p>
                 </div>
               </div>
-              {showInfo.tipo && (
-                <p>Indica el tipo del Pokémon y cuánto daño puede recibir antes de quedar Fuera de Combate. Cada Pokémon tiene su propia Debilidad y Resistencia, recogidas en la parte inferior de la carta. Recuerda esto cuando te prepares para tu próximo combate.</p>
-              )}
             </div>
 
             {/* Parte 3 */}
@@ -136,19 +116,9 @@ function Home() {
               <div className="card-part-header">
                 <div className="card-part-title">
                   <h3>Ataques</h3>
-                </div>
-                <div className="card-part-button">
-                  <button
-                    onClick={() => toggleInfo('ataques')}
-                    className={`toggle-button ${showInfo.ataques ? 'active' : ''}`}
-                  >
-                    {showInfo.ataques ? '-' : '+'}
-                  </button>
+                  <p>Indica el tipo del Pokémon y cuánto daño puede recibir antes de quedar Fuera de Combate. Cada Pokémon tiene su propia Debilidad y Resistencia, recogidas en la parte inferior de la carta. Recuerda esto cuando te prepares para tu próximo combate.</p>
                 </div>
               </div>
-              {showInfo.ataques && (
-                <p>Para llevar a cabo un ataque, debes tener unida al Pokémon la cantidad y el tipo de Energía que se indica aquí. El número a la derecha muestra cuánto daño hará el ataque al Pokémon Activo del rival.</p>
-              )}
             </div>
 
             {/* Parte 4 */}
@@ -156,19 +126,10 @@ function Home() {
               <div className="card-part-header">
                 <div className="card-part-title">
                   <h3>Coste de Retirada</h3>
-                </div>
-                <div className="card-part-button">
-                  <button
-                    onClick={() => toggleInfo('retirada')}
-                    className={`toggle-button ${showInfo.retirada ? 'active' : ''}`}
-                  >
-                    {showInfo.retirada ? '-' : '+'}
-                  </button>
+                  <p>Esta es la cantidad de Energía necesaria para retirar a tus Pokémon del Puesto Activo a la Banca. Para realizar esta acción, debes descartar dicha cantidad de Energía del Pokémon Activo y sustituirlo por un Pokémon de tu Banca.</p>
                 </div>
               </div>
-              {showInfo.retirada && (
-                <p>Esta es la cantidad de Energía necesaria para retirar a tus Pokémon del Puesto Activo a la Banca. Para realizar esta acción, debes descartar dicha cantidad de Energía del Pokémon Activo y sustituirlo por un Pokémon de tu Banca.</p>
-              )}
+
             </div>
           </div>
 

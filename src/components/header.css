@@ -37,6 +37,8 @@ nav ul li a {
   font-size: 1rem; /* Reduce el tamaño de la fuente */
   font-weight: bold;
   transition: color 0.3s ease;
+  font-size: 22px;
+
 }
 
 nav ul li a:hover {

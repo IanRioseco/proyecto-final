@@ -16,7 +16,7 @@ function Header() {
           <li><Link to="/Home">Inicio</Link></li>
           <li><Link to="/Deckbuilder">Crear Mazo</Link></li>
           <li><Link to="/MyDecks">Mis Mazos</Link></li>
-          <li><Link to="/help">Ayuda</Link></li>
+          <li><Link to="/Help">Ayuda</Link></li>
         </ul>
 
       </nav>
